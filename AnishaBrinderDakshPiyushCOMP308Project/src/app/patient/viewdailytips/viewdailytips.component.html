@@ -1,0 +1,26 @@
+<section class="about" id="appointment">
+		<div class="container">
+				<h3 style="text-align: center">Daily motivational tip</h3>
+			<div class="about-grids">
+			
+				<div class="col-md-1 col-sm-1 col-xs-3 ">
+				</div>
+				<div class="col-md-9 col-sm-9 col-xs-9 abt-rt-grid">
+					<div class="w3ls-grid-head text-center">
+        <h6></h6>
+						<!--		<h3>online booking</h3>-->
+					</div>
+					<div class="abt-form text-center">
+			
+<div *ngIf="dailytip">
+<p>{{dailytip.tip}}</p>
+</div>
+<div *ngIf="!dailytip">
+    No daily motivational tip available!!!
+</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</section>

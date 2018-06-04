@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/">
+	<title>EHealth</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Sanatorium a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<!-- default-css-files -->
+	<link href="./assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="./assets/css/flexslider.css" type="text/css" media="screen" />
+	<link href="./assets/css/font-awesome.css" rel="stylesheet" type="text/css" media="all">
+	<!-- default-css-files -->
+	<!-- Online fonts -->
+	<link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
+	<!-- //Online fonts -->
+	<!-- style.css-file -->
+	<link href="./assets/css/style.css" rel='stylesheet' type='text/css' />
+	<!-- //style.css-file -->
+</head>
+<body>
+  <app-root></app-root>
+  <script type="text/javascript" src="./assets/js/jquery-2.1.4.min.js"></script>
+	<!-- password-script -->
+	<script type="text/javascript">
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+	<!-- //password-script -->
+
+
+	<script src="./assets/js/responsiveslides.min.js"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider4").responsiveSlides({
+				auto: true,
+				pager: true,
+				nav: false,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!--banner Slider starts Here-->
+	<script type="text/javascript" src="./assets/js/modernizr.custom.79639.js"></script>
+	<!-- //Default-JavaScript-File -->
+	<!-- gallery-pop-up -->
+	<script src="./assets/js/jquery.chocolat.js"></script>
+	<link rel="stylesheet" href="./assets/css/chocolat.css" type="text/css" media="screen">
+	<!--light-box-files -->
+	<script type="text/javascript">
+		$(function () {
+			$('.agileinfo_portfolio_grid a').Chocolat();
+		});
+	</script>
+	<!-- //gallery-pop-up -->
+
+	<!-- FlexSlider -->
+	<script defer src="./assets/js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+		$(function () {});
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function (slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
+	<!-- FlexSlider -->
+	<!-- start-smoth-scrolling-nav -->
+	<script type="text/javascript" src="./assets/js/move-top.js"></script>
+	<script type="text/javascript" src="./assets/js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 100,
+				easingType: 'linear'
+			};
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
+	<!-- //Slide-To-Top JavaScript -->
+	<!-- jarallax scrolling -->
+	<script src="./assets/js/jarallax.js"></script>
+	<script src="./assets/js/SmoothScroll.min.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<!-- //jarallax scrolling -->
+	<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+		});
+	</script>
+	<!-- //smooth scrolling -->
+	<script type="text/javascript" src="./assets/js/bootstrap-3.1.1.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+	<header>
+		<div class="top-header" id="home">
+			<div class="container">
+				<div class="col-md-8 col-sm-8 col-xs-8 top-left">
+				 <div *ngIf="isLoggedIn$" > <h3 style="color: white">Hello {{user.firstname}}</h3></div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4 top-right">
+					<a *ngIf="!isLoggedIn$" [routerLink]="['/authentication/signin']" ><span></span> Sign In</a>
+					<a *ngIf="!isLoggedIn$" [routerLink]="['/authentication/signup']" ><span></span> Sign Up</a>
+          	<a *ngIf="isLoggedIn$" (click)="signout()" ><span></span> Sign out</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</header>
+	<!--//header-section-end-here-->
+	
+	<!-- //popup for sign in form -->
+
+	<!-- //popup for sign up form -->
+	<!--banner-section-starts-here-->
+	<section class="banner jarallax">
+		<div class="navigation">
+			<div class="container">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header navbar-left">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					</div>
+					<div class="logo">
+						<h1><a class="navber-brand" href="index.html"><i class="fa fa-heartbeat" aria-hidden="true"></i> EHealth</a></h1>
+					</div>
+					<div class="collapse navbar-collapse navbar-right navigation-right" id="bs-example-navbar-collapse-1">
+						<nav class="link-effect-3 w3ls-navma" id="link-effect-3">
+							<ul class="nav1 navbar-nav nav nav-wil" *ngIf="!isLoggedIn$">
+							 <li class="active" href="index.html"><a >Home</a></li>
+            
+          
+							</ul>
+              <ul class="nav1 navbar-nav nav nav-wil" *ngIf="isLoggedIn$">
+							 <li class="active"><a [routerLink]="['/']">Home</a></li>
+              <li *ngIf="user.type=='nurse'"><a [routerLink]="['/nurse']">List vital signs</a></li>
+           
+            <li *ngIf="user.type=='nurse'"><a [routerLink]="['/nurse/create']">Insert Vital signs</a></li>
+             <li *ngIf="user.type=='nurse'"><a [routerLink]="['/nurse/alerts']">Emergency alerts</a></li>
+            <li *ngIf="user.type=='nurse'"><a [routerLink]="['/nurse/createtip']">Motivational tips</a></li>
+           <li *ngIf="user.type=='patient'"><a [routerLink]="['/patient']">List vital signs</a></li>
+            <li *ngIf="user.type=='patient'"><a [routerLink]="['/patient/create']">Insert Vital signs</a></li>
+            <li *ngIf="user.type=='patient'"><a [routerLink]="['/patient/viewtip']">Motivational tips</a></li>
+            <li *ngIf="user.type=='patient'"><a [routerLink]="['/patient/alert']">Create Emergeny alert</a></li>
+             <li *ngIf="user.type=='patient'"><a [routerLink]="['/patient/check']">Check symptoms</a></li>
+           
+           
+						
+							</ul>
+						</nav>
+					</div>
+				</nav>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	
+	</section>
+	<!--about-section-starts-here-->
+
+  <router-outlet></router-outlet>
+	<!--testimonial-section-end-here -->
+
+	<!--contact-section-end-here-->
+	
+	<!--//contact-section-end-here-->
+	<!--footer-section-end-here-->
+
+		<div class="container">
+			<div class="footer-grids">
+			
+				<div class="footer-bottom">
+					<div class="col-md-6 col-sm-6 col-xs-6 copy-right-grids">
+						<div class="copy-left">
+							<p class="footer-gd">© 2017 EHealth. All Rights Reserved </p>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-6 top-middle">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>

@@ -1,0 +1,36 @@
+<!-- popup for sign in form -->
+	
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div id="small-dialog1" class="mfp-hide book-form">
+				
+					<h3>Sign In </h3>
+					<form (ngSubmit)="signin()">
+						<input type="email" name="Email" class="email" [(ngModel)]="credentials.username"  placeholder="Email" required="" />
+						<input type="password" name="Password" [(ngModel)]="credentials.password" class="password" placeholder="Password" required="" />
+						<ul>
+							<li>
+								<input type="checkbox" id="brand1" value="">
+								<label for="brand1"><span></span>Rememb er me</label>
+							</li>
+						</ul>
+						<a href="#">Forgot Password?</a><br>
+						<div class="clearfix"></div>
+						<input type="submit" value="Sign In">
+            <span>{{errorMessage}}</span>
+					</form>
+					<div class="w3ls-or">
+						<p>Or</p>
+					</div>
+					<div class="top-middle w3ls-sma">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>

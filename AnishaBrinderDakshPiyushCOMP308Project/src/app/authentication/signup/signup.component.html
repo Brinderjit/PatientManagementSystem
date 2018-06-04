@@ -1,0 +1,31 @@
+	<!-- popup for sign up form -->
+	
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div id="small-dialog2" class="mfp-hide book-form">
+					
+					<h3>Sign Up</h3>
+					<form (ngSubmit)="signup()">
+						<input type="text" name="firstName" [(ngModel)]="user.firstname" placeholder="Your First Name" required="" />
+            	<input type="text" name="lastName" [(ngModel)]="user.lastname" placeholder="Your Last Name" required="" />
+
+						<input type="email" name="Email" [(ngModel)]="user.email" class="email" placeholder="Email" required="" />
+            <select class="select" name="type" [(ngModel)]="user.type" >
+              <option selected="true">Select Type</option>
+              <option value="nurse">Nurse</option>
+                <option value="patient">Patient</option>
+
+            </select>
+            
+						<input type="password" name="Password" id="password1" class="password" [(ngModel)]="user.password" placeholder="Password" required="" />
+						<input type="password" name="Password" id="password2" class="password" placeholder="Confirm Password" required="" />
+             <input type="text"  [(ngModel)]="user.address" id="address" placeholder="Enter address" name="address">
+               <input type="text"  [(ngModel)]="user.city" id="city" placeholder="Enter city" name="city">
+                 <input type="text"  [(ngModel)]="user.phonenumber" id="phonenumber" placeholder="Enter phone number" name="phonenumber">
+						<input type="submit" value="Sign Up">
+                <span>{{errorMessage}}</span>
+					</form>
+				</div>
+			</div>
+		</div>
+	

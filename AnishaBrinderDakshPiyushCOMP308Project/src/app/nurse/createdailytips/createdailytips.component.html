@@ -1,0 +1,33 @@
+<section class="about" id="appointment">
+		<div class="container">
+					<h3 style="text-align: center">Create daily motivational tips</h3>
+			<div class="about-grids">
+			
+				<div class="col-md-1 col-sm-1 col-xs-3 ">
+				</div>
+				<div class="col-md-9 col-sm-9 col-xs-9 abt-rt-grid">
+					<div class="w3ls-grid-head text-center">
+        <h6></h6>
+						<!--		<h3>online booking</h3>-->
+					</div>
+					<div class="abt-form text-center">
+						<form (ngSubmit)="create()">
+							<div class="col-sm-4 col-xs-4 w3ls-lt-form">
+								<div class="w3ls-pr">
+           <textarea rows="4" cols="105" name="dailytip" [(ngModel)]="dailytip.tip" placeholder="    Write a motivational tip here"></textarea>
+							
+								</div>
+							</div>
+						
+							<div class="clearfix"></div>
+							<input type="submit" value="Create Tip">
+  <span>{{success}}</span>
+             <span>{{errorMessage}}</span>
+						</form>
+           
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</section>

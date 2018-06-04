@@ -1,0 +1,69 @@
+<section class="about" id="appointment">
+		<div class="container">
+					<h3 style="text-align: center">Find possible medical condition</h3>
+			<div class="about-grids">
+			
+				<div class="col-md-1 col-sm-1 col-xs-3 ">
+				</div>
+				<div class="col-md-9 col-sm-9 col-xs-9 abt-rt-grid">
+					<div class="w3ls-grid-head text-center">
+        <h6></h6>
+						<!--		<h3>online booking</h3>-->
+					</div>
+            
+					<div class="abt-form text-center">
+            <div class="lead mb-4">Select symptoms</div>
+						<form (ngSubmit)="check()">
+							<div class="col-sm-4 col-xs-4 w3ls-lt-form">
+								<div class="w3ls-pr">
+           
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="info.fever" name="acb">
+        <label class="form-check-label">
+          Fever
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="info.cough" name="cough">
+        <label class="form-check-label" for="defaultCheck1">
+          Cough
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="info.nausea" name="nausea">
+        <label class="form-check-label" for="defaultCheck1">
+          Nausea
+        </label>
+      </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="info.fatigue" name="fatigue">
+        <label class="form-check-label" for="defaultCheck1">
+          Fatigue
+        </label>
+      </div>
+         <div class="form-group">
+       
+        <input type="number" class="form-control" [(ngModel)]="info.age" name="age" placeholder="Enter Age">
+      </div>
+
+								</div>
+							</div>
+						
+
+							<div class="clearfix"></div>
+							<input type="submit" value="Check symptoms">
+
+						</form>
+             <span>{{errorMessage}}</span>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+         <div class="jumbotron">
+    <h3>{{result}}</h3>
+  </div>
+			</div>
+		</div>
+	</section>

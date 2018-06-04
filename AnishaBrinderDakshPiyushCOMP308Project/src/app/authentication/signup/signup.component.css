@@ -1,0 +1,11 @@
+.select{
+        padding: 12px 0;
+    font-size: 14px;
+    border: none;
+    border-bottom: 2px solid #f99104;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
